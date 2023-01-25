@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  site-url: https://tegedik.github.io/td/
+  title: "Technical Difficulties"
+  open-graph: true
+  twitter-card:
+    title: "Technical Difficulties"
+    creator: "@tahirenesgedik"
+    image: "https://tegedik.github.io/td/dim.jpg"
+  navbar:
+    right:
+      - href: about.qmd
+        text: about
+      - icon: github
+        href: https://github.com/tegedik
+      - icon: twitter
+        href: https://twitter.com/tahirenesgedik
+      - icon: mastodon
+        href: https://fosstodon.org/web/@thrnsgdk
+format:
+  html:
+    theme: 
+      - simplex
+      - custom.scss
+    css: styles.css
+
+editor: visual
+

@@ -1,0 +1,96 @@
+---
+title: "Trouble with Multinomial Logistic Regression Tables"
+description: " "
+author: 
+  - name: T.E.G.
+    url: {}
+citation: true
+date: "8/29/2021"
+date-format: medium
+draft: false
+bibliography: ref.bib
+reference-location: margin
+---
+
+---
+nocite: |
+  @flextable, @modelsummary, @texreg, @sjPlot, @stargazer, @huxtable, @kableExtra, @gt, @nnet
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(nnet)
+library(modelsummary)
+require(foreign)
+```
+
+I work mostly with binary and ordinal outcomes. So, I rarely use multinomial logistic regression but yesterday I had to, and it proved tricky to create tables for model results. Basically, multinomial logistic regression generalizes logistic regression to nominal variables with multiple categories. It is preferred when these categories are unordered but also used for ordinal outcomes when proportional odds assumption is violated. It is easy to estimate, but not as straightforward to interpret as binary logistic regression. And it might not be practical when your outcome has many categories. In `R`, you can use `multinom` function from {nnet} package to estimate multinomial logistic regression models:[^1]
+
+[^1]: I use the data from the example on IDRE UCLA: https://stats.idre.ucla.edu/r/dae/multinomial-logistic-regression/.
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+df <- read.dta("https://stats.idre.ucla.edu/stat/data/hsbdemo.dta") 
+multinom_fit <- multinom(prog ~ ses + female + write, 
+                         data = df, trace=FALSE) # trace=FALSE to suppress convergence info.
+summary(multinom_fit)
+```
+
+There are no $p$-values on this output but you can calculate them manually as explained in the IDRE UCLA example (see the footnote). That is not our issue now. We want to create a table for these results in a publishable format. And that is the tricky part. {Stargazer} provides one ([recommended](https://stackoverflow.com/questions/18961681/how-to-display-beautiful-glm-and-multinom-table-with-rmd-and-knit-html)) method to do so:
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, header=FALSE, results='asis'}
+library(stargazer)
+stargazer(multinom_fit, type = "html")
+
+```
+
+You can also export the table to $\LaTeX$, but not Word (don't forget to add `results='asis'` to code chunk if you use rmarkdown document). Next, you can use `tab_model` from {sjPlot}:
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, header=FALSE, results='asis'}
+library(sjPlot)
+tab_model(multinom_fit)
+
+```
+
+`tab_model` is great to create html tables. You can then drag and drop the html file to a Word document, and tweak a little to make it publication-ready. But it does not export to $\LaTeX$. Moreover, you might want a wide table (outcome categories side-by-side) rather than a long one.
+
+Other options are available, e.g., {texreg} package. It provides functions to export in all three formats mentioned above. But they create long tables.
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, header=FALSE, results='asis'}
+library(texreg)
+htmlreg(multinom_fit ,single.row=TRUE)
+```
+
+This could do the job if you are okay with a long table but it requires some work. Unfortunately, I wanted a wide table with outcome categories on separate columns *and* I needed to export to Word.
+
+The solution comes from the {modelsummary} package. Using the `shape` argument in the `modelsummary` function, we could create tables with outcome categories side-by-side.
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, header=FALSE, results='asis'}
+library(modelsummary)
+library(flextable)
+modelsummary(multinom_fit,
+             stars = TRUE, exponentiate = TRUE, shape = model + term ~ response, 
+            output = "flextable") %>% 
+  autofit() 
+```
+
+If you have more than one model, as usually is the case, you might want to specify `shape` argument in a different way:
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, header=FALSE, results='asis'}
+library(modelsummary)
+library(flextable)
+
+multinom_fit1 <- multinom(prog ~ ses + female + write, data = df, trace=FALSE)
+multinom_fit2 <- multinom(prog ~ ses + female + write + math, data = df, trace=FALSE)
+
+modelsummary(list(multinom_fit1, multinom_fit2),
+             stars = TRUE, exponentiate = TRUE, shape = term ~ model + response, 
+            output = "flextable") %>% 
+  autofit() 
+```
+
+As you can see, I also specify `output` argument as `"flextable"`. Thanks to {modelsummary} package, we can use {gt}, {kableExtra}, {huxtable}, and {flextable} to customize the appearance of the table. I prefer {flextable} because it makes adding the table into a Word document quite easy as explained [here](https://davidgohel.github.io/flextable/reference/body_add_flextable.html).
+
+We also need to make other changes: adding title, labels, spanner, confidence intervals, goodnes-of-fit statistics, etc.[^2] Luckily, there are various helper functions to make these changes. I highly recommend checking the websites for [{modelsummary}](https://vincentarelbundock.github.io/modelsummary/index.html) and [{flextable}](https://davidgohel.github.io/flextable/index.html).
+
+[^2]: When you use odds ratios, and associated standard errors and confidence intervals, you need to be extra careful: https://github.com/tidymodels/broom/issues/422. For some, standard error of an odds ratio does not make much sense.

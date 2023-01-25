@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="T.E.G.">
+
+<title>Technical Difficulties - Sorcerer’s Apprentice Approach to Statistical Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Technical Difficulties - Sorcerer’s Apprentice Approach to Statistical Analysis">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="Technical Difficulties">
+<meta name="twitter:title" content="Technical Difficulties">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://tegedik.github.io/td/dim.jpg">
+<meta name="twitter:creator" content="@tahirenesgedik">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Difficulties</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tegedik"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tahirenesgedik"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/web/@thrnsgdk"><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Sorcerer’s Apprentice Approach to Statistical Analysis</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>T.E.G. </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Dec 7, 2018</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<!--*I started writing this post months ago, but couldn't finish it. Now it seems redundant. Especially, after the ["Cargo-cult statistics and scientific crisis"](https://www.significancemagazine.com/593) by Stark and Satelli (2018), which was published in Significance Magazine and covers a lot more (I highly recommend it). Still, I forced myself to finish this and hope you enjoy it.*-->
+<blockquote class="blockquote">
+<p>Numbers do not produce value. The widespread availability of muscular number-crunching computers has had the untoward effect of yielding power to the sorcerer’s apprentice. Statistics and computers must support the research activity, not motivate it <span class="citation" data-cites="Alfred1987">(<a href="#ref-Alfred1987" role="doc-biblioref">Alfred 1987, 3</a>)</span>.</p>
+</blockquote>
+<p>Alfred criticized neglecting the role of theory (which should guide any reseach inquiry) for the sake of “number-crunching.” This is a fair argument and repeated frequently by others. I would like to talk about a different (but related) issue using the metaphor, <em>sorcerer’s apprentice</em>. I am less concerned with the role of theory and its relation to method, but I am interested in how statistical methods are used in practice. But first, what does sorcerer’s apprentice mean?</p>
+<div class="page-columns page-full"><p>It is the name of a poem by Goethe (<em>Der Zauberlehrling</em> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>). <a href="https://en.wikipedia.org/wiki/The_Sorcerer%27s_Apprentice">The story</a> is about a sorcerer’s apprentice who is left alone to do some chores:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;I think the German word captures the diminutive sense better.</p></li></div></div>
+<blockquote class="blockquote">
+<p>Tired of fetching water by pail, the apprentice enchants a broom to do the work for him – using magic in which he is not yet fully trained. The floor is soon awash with water, and the apprentice realizes that he cannot stop the broom because he does not know how. The apprentice splits the broom in two with an axe – but each of the pieces becomes a whole new broom that takes up a pail and continues fetching water, now at twice the speed.</p>
+</blockquote>
+<div class="page-columns page-full"><p>In the end, the master returns and saves the apprentice <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The moral of the story: one should not dare to do things beyond his/her understanding. In our version, apprentice is an academic <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, and the broom is “statistics and computers.” Yet, I think computers (or rather the software we use for analysis) could become “broom” alone. And it might lead to a lack of understanding of statistics. In fact, this is different from neglecting the role of theory and might happen even if someone has a strong theoretical background and guidance.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;You might not know that this is Goethe’s poem, but maybe the story sounds familiar. The reason is that you can find references to the Sorcerer’s Apprentice from the Communist Manifesto to <a href="https://youtu.be/2DX2yVucz24?t=26s">Disney’s <em>Fantasia</em> (1940)</a>.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;It might mean faculty member or graduate student. Honestly, I don’t think it matters a lot here.</p></li></div></div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sa.png" class="img-fluid figure-img" width="543"></p>
+<p></p><figcaption class="figure-caption"><em>Der Zauberlehrling</em> by Ferdinand Barth (1842–1892)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ![*Der Zauberlehrling* by Ferdinand Barth (1842–1892)](sa.png){width=100px} -->
+<div class="page-columns page-full"><p>There are various reasons why this could happen, especially in the social sciences <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. I would like to discuss three of them. The first and well-known reason (already stated by Alfred) is the availability of computers and increasing (computational) power of statistical software. Nowadays, we have easy access to the state-of-art programs which implement complex statistical techniques. The information on where to click or few lines of code are usually available online. The software returns an output and all you need to know is what those numbers in the output mean (I might be exaggerating). But the software availability alone is not enough and this takes us to the second (and more important) reason: the <em>golems</em> of the analysis.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;I think social sciences are particularly susceptible, but this could be an overstatement.</p></li></div></div>
+<p>In his book, McElreath <span class="citation" data-cites="McElreath2015">(<a href="#ref-McElreath2015" role="doc-biblioref">2015</a>)</span> begins the first chapter with the example of <em>statistical golems</em> which refer to the “tests” widely used in statistical analyses and taught in introductory courses. Those of us who took these courses are familiar with these golems, for example:</p>
+<blockquote class="blockquote">
+<p>Whenever someone deploys even a simple statistical procedure, like a classical <em>t</em>-test, she is deploying a small golem that will obediently carry out an exact calculation, performing it the same way (nearly) every time, without complaint. <span class="citation" data-cites="McElreath2015">(<a href="#ref-McElreath2015" role="doc-biblioref">McElreath 2015, 2</a>)</span></p>
+</blockquote>
+<p>It is easy to find compilations of these golems, and guidelines on how to choose among them. A quick google search with <a href="https://www.google.com.tr/search?biw=1422&amp;bih=737&amp;tbm=isch&amp;sa=1&amp;ei=vJ8lW-PTFJKTmgWA9KXwBg&amp;q=which+statistical+test+to+use+&amp;oq=which+statistical+test+to+use+&amp;gs_l=img.3..0i67k1j0l3j0i30k1j0i24k1l5.419359.423511.0.423693.22.19.0.0.0.0.231.2160.0j13j2.15.0....0...1c.1.64.img..8.14.2051....0.7I2-ZKpUkSM">“which statistical test to use”</a> would return dozens of flowcharts (McElreath provided one in his book).</p>
+<div class="page-columns page-full"><p>It is neither possible to deny the usefulness of these golems nor practical to get rid of them completely as they still might have some pedagogical value. But we need to keep in mind McElreath’s warning that “…there is no wisdom in the golem. It doesn’t discern when the context is inappropriate for its answers. It just knows its own procedure, nothing else” <span class="citation" data-cites="McElreath2015">(<a href="#ref-McElreath2015" role="doc-biblioref">McElreath 2015, 2</a>)</span>. <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> So, it is not simply a matter of computational power and software implementation, but rather, how we use these two together. Unfortunately, the “know-how” about these golems might conceal the ignorance of the actual analytical techniques.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;The issue is not limited to this test and similar others. For example, in the introductory courses, we learn four scales of measurement <span class="citation" data-cites="Stevens1946">(<a href="#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>: nominal, ordinal, interval, and ratio. Now imagine we have a variable showing number of children in a household and response categories are “0, 1, 2, 3, 4, 5+”. How would you classify such a variable based on the four scales above? It is not nominal, not interval or ratio (e.g., 5+). One can say ordinal here, but we might lose information by treating it ordinal, especially for the first response categories. A better category would be (right-) censored count variable which can be analyzed (as an outcome) using a censored poisson regression model <span class="citation" data-cites="Cameron2005">(<a href="#ref-Cameron2005" role="doc-biblioref">Cameron and Trivedi 2005</a>)</span>.</p></li></div></div>
+<p>These arguments seem to imply that the burden is on the shoulders of the researcher. To a certain extent, this is true: the researcher should act responsibly, and explain the procedures and rationale behind them. This requires giving some thought to the tests instead of treating them as ready-made solutions (<em>golems</em>). But there is a third reason as to why this is not always possible. And it is <em>time and resource constraints</em>.</p>
+<div class="page-columns page-full"><p>It is expected that a graduate student should master their substantive research area <em>and</em> the statistical methods they use (or in general, research methods). But is this really possible? If so, to what extent? If a student does not come to graduate school with a strong background in statistics, most graduate courses/seminars would not take far beyond an intermediate level. For basic applications, this could be enough. But in practice, we have to deal with intricate problems which require expertise.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;One can argue that that is why we have academic advisors. But again, unless their substantive area of research includes statistical methods, can we really trust them? Are they more careful in using these statistical golems? I would prefer to err on the side of caution. So, unlike the sorcerer’s apprentice, we might not have a master to save the day.</p></li></div></div>
+<p>Usually, we need to prioritize what to study, especially under the pressure to finish projects and publish. Learning and mastering statistical methods can be time consuming and less rewarding. There is a trade-off and the decision is not that difficult: first and foremost, we are expected to contribute to our substantive area of research. There are lots of golems out there doing the job. And we saw others (senior academics?) using them without much hesitation. So lurks the danger of becoming a <em>sorcerer’s apprentice</em>.</p>
+<p>Here is my two cents on how to avoid this approach as much as possible:</p>
+<!--Learning what is going on behind the curtain (assumptions, formulae, basic math) at least to have a general idea:-->
+<p>We might not be able to master statistical methods, their mathematical representation, or their software implementation, but it is possible to learn, at least in simpler terms, what is going on behind the curtain. For instance, there are many accessible discussions on the assumptions of statistical techniques and what could happen in case of violation.</p>
+<p>Close attention to model specification would help as well. For example, one should be clear about the rationale of including some variables, while excluding others. It would be misleading to dump all variables, and then eliminating them one by one in an arbitrary fashion (e.g., p-value fishing). If we are not careful enough about the model specification, we will end up with “garbage in, garbage out” models.</p>
+<p>After running the model, it is good to keep your guard up and remain suspicious about the results, instead of accepting them as presented in the computer output. It is possible that you missed some important issue at some point in the previous steps of the analysis. Making sensible changes (but <em>not</em> fishing for significant results or larger effect sizes), and testing for sensitivity would be helpful to improve the quality of the analysis.</p>
+<!--Finally, there is nothing wrong about asking for help or feedback. Even if it comes from a colleague who could make similar mistakes, a new perspective might help us to see a problem *hiding in plain sight*.-->
+<p><em>Note: A friend commented that these arguments mostly apply to secondary data analysis. For example, in experimental research, there are other issues that require more attention (such as randomization, power, treatment, etc.), but they might not encounter the above mentioned problems to the same extent (e.g., variable selection, model specification). I agree with my friend, since I had secondary data analysis in my mind while writing this post. But I also think that the experimental researchers are no less susceptible to become a sorcerer’s apprentice. However, they might need to adopt different precautionary measures.</em></p>
+<!-- [^1]: For those who need an authoritative word from French men: "Those who expect miracles from the mythical triad, *archives*, *data*, and *computers*, do not understand the difference between the constructed objects which are scientific facts...and the real objects which are observed in museums and which, trough their 'concrete surplus', offer unlimited possibilites for new constructions as new questions are put to them. If these epistemological prelimiaries are ignored, there is a great risk of treating identical things differently and different things identically, of comparing incomparable and failing to compare the comparable, because even the most objective 'data' are obtained by applying grids...which involve theoretical presuppositions and therefore overlook information which another construction of the facts might have grasped"[@Bourdieu1991, p.36]. -->
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Alfred1987" class="csl-entry" role="doc-biblioentry">
+Alfred, Braxton M. 1987. <em><span class="nocase">Elements of Statistics for the Life and Social Sciences</span></em>. London Paris Tokyo: Springer-Verlag.
+</div>
+<div id="ref-Cameron2005" class="csl-entry" role="doc-biblioentry">
+Cameron, A. Colin, and Pravin K. Trivedi. 2005. <em><span class="nocase">Microeconometrics: Methods and Applications</span></em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-McElreath2015" class="csl-entry" role="doc-biblioentry">
+McElreath, Richard. 2015. <em><span class="nocase">Statistical Rethinking: A Bayesian Course with Examples in R and Stan</span></em>.
+</div>
+<div id="ref-Stevens1946" class="csl-entry" role="doc-biblioentry">
+Stevens, S. S. 1946. <span>“<span class="nocase">On the Theory of Scales of Measurement</span>.”</span> <em>Science</em> 103: 677–80.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{t.e.g.2018,
+  author = {T.E.G.},
+  title = {Sorcerer’s {Apprentice} {Approach} to {Statistical}
+    {Analysis}},
+  date = {2018-12-07},
+  url = {https://tegedik.github.io/td//posts/socapp},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-t.e.g.2018" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+T.E.G. 2018. <span>“Sorcerer’s Apprentice Approach to Statistical
+Analysis.”</span> December 7, 2018. <a href="https://tegedik.github.io/td//posts/socapp">https://tegedik.github.io/td//posts/socapp</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
