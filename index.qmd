@@ -4,7 +4,7 @@ listing:
   sort: "date desc"
   type: table
   #fields: [date, title, author, categories]
-  #image-placeholder: dim.jpg
+  image-placeholder: dim.jpg
   grid-columns: 2
   categories: false
   sort-ui: false

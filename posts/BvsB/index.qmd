@@ -5,6 +5,9 @@ author:
   - name: T.E.G.
     url: {}
 citation: true
+#categories:
+#  - sociology
+#  - theory
 date: "8/29/2022"
 date-format: medium
 draft: false
@@ -12,7 +15,7 @@ bibliography: ref.bib
 reference-location: margin
 ---
 
-::: {#fig-elephants layout-ncol="2"}
+::: {#fig-sociologists layout-ncol="2"}
 ![](pb.png)
 
 ![](rb.png)
@@ -68,4 +71,4 @@ To sum up, the difference between the two cannot be explained solely by the intr
 
 There is one last thing I want to talk about: the reason why I asked this question. I think it is unfortunate that we do not know more about Boudon and a certain kind of sociology inspired by his (and others) work. This sociology is characterized by its emphasis on microfoundations, mechanisms, and explanation. Some proponents call it "rigorous" or "scientific" sociology. Well, these are bold statements and we don't need to go that far.[^11] But it is a tradition neglected in Turkey with some valuable contributions.
 
-[^11]: It is a risky business to call what you do as "scientific" while dismissing others. 
+[^11]: It is a risky business to call what you do as "scientific" while dismissing others.
