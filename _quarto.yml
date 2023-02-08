@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  site-url: https://tegedik.github.io/td/
+  site-url: https://tegedik.github.io
   title: "Technical Difficulties"
   open-graph: true
   twitter-card:
