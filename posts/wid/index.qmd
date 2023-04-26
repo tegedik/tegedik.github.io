@@ -53,6 +53,10 @@ WID_data_TR %>%
 
 Now, this is not really a tidy data frame. The column `variable` has variable codes in rows. Another column, `percentile`, provides information on *percentile codes*.[^1] And, `value` contains the values of interest.[^2] As you will see in a second, these percentile codes are required to get information on the shares of percentile groups.
 
+[^1]: The metadata and README files are automatically downloaded with the data and contains useful information about the codes and variables.
+
+[^2]: I think `country` and `year` are self-explanatory; `age` refers to age group and `pop` refers to population unit. I am not going to use these variables.
+
 Normally, we might want to reshape the data frame to have variables in columns, e.g., using `pivot_wider` from {dplyr}:
 
 ```{r}
@@ -67,9 +71,13 @@ WID_data_TR %>%
 
 ```
 
-Here, I won't do that because I am just going to visualize trends, and long format works as well. In fact, long format make faceting easier in the following plots. 
+Here, I won't do that because I am just going to visualize trends, and long format works as well. In fact, long format make faceting easier in the following plots.
 
 I am going to use two variables (pre-tax national income share[^3] and net personal wealth share[^4]) and three percentile groups (top 1%, top 10%, and bottom 50%). As I said, we don't need to reshape the data, we can just filter the values:
+
+[^3]: "pre-tax national income share held by the \[percentile\] group. Pre-tax national income is the sum of all pre-tax personal income flows accruing to the owners of the production factors, labor and capital, before taking into account the operation of the tax/transfer system, but after taking into account the operation of pension system."
+
+[^4]: "Net personal wealth share held by the \[percentile\] group. Net personal wealth is the total value of non-financial and financial assets (housing, land, deposits, bonds, equities, etc.) held by households, minus their debts."
 
 ```{r}
 #| eval: true
@@ -109,9 +117,9 @@ df %>%
         legend.title = element_blank())
 ```
 
-This plot helps us to see the differences between percentile groups for income and wealth shares. For example, the wealth share of bottom 50% is lower than its income share in percentage points, over the years. Unsurprisingly, the opposite is the case for top 10% and top 1%, and this shows the well-known difference between concentration of wealth and income. 
+This plot helps us to see the differences between percentile groups for income and wealth shares. For example, the wealth share of bottom 50% is lower than its income share in percentage points, over the years. Unsurprisingly, the opposite is the case for top 10% and top 1%, and this shows the well-known difference between concentration of wealth and income.
 
-The plots share the y-axis scale, and the range of percentage values makes it hard to see the changes over time. Still, we can say that the wealth and income share of the bottom 50% was relatively stable over the years compared to the top 10% and 1%. In the early 2000s, there is a sharp decline, especially in wealth share for these groups. Income share also indicates more variation for the top 10% and 1% in the last decade, but as I will show you, there is a specific reason for that. Let's free the y axis to see changes in trends a little more clear. 
+The plots share the y-axis scale, and the range of percentage values makes it hard to see the changes over time. Still, we can say that the wealth and income share of the bottom 50% was relatively stable over the years compared to the top 10% and 1%. In the early 2000s, there is a sharp decline, especially in wealth share for these groups. Income share also indicates more variation for the top 10% and 1% in the last decade, but as I will show you, there is a specific reason for that. Let's free the y axis to see changes in trends a little more clear.
 
 ```{r}
 #| eval: true
@@ -135,16 +143,3 @@ df %>%
   theme(legend.position = "bottom",
         legend.title = element_blank())
 ```
-
-
-
-
-
-[^1]: The metadata and README files are automatically downloaded with the data and contains useful information about the codes and variables.
-
-[^2]: I think `country` and `year` are self-explanatory; `age` refers to age group and `pop` refers to population unit. I am not going to use these variables. 
-
-[^3]: "pre-tax national income share held by the [percentile] group. Pre-tax national income  is the sum of all pre-tax personal income flows accruing to the owners of the production factors, labor and capital, before taking into account the operation of the tax/transfer system, but after taking into account the operation of pension system."
-
-[^4]: "Net personal wealth share held by the [percentile] group. Net personal wealth is  the total value of non-financial and financial assets (housing, land, deposits, bonds, equities, etc.) held by households, minus their debts."
-
