@@ -1,18 +1,39 @@
 ---
 caption: a
 about:
-  template: marquee
----
+  template: trestles
+  image: profile.jpeg
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/tegedik
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/tahirenesgedik
 
-<center>
+---
+Sociologist. Interested in quantitative analysis and statistical methods in the social sciences.
+
+<!-- <center> 
 
 ```{r, echo=FALSE, fig.align="center", fig.cap="*The Curse of Dimensionality* by Saul Steinburg (1968)", out.width="80%"}
 knitr::include_graphics("dim.jpg")
 ```
 
-</center>
 
-Short notes and quick applications from T.E.G. There will be a lack of organization inevitably. Although I am a novice, I answered some questions here:
+</center> -->
+### Education
+
+**University of Florida**  
+PhD in Sociology | 2018
+
+**Middle East Technical University**  
+MSc in Sociology | 2012
+
+**Middle East Technical University**  
+BSc in Sociology | 2009
+
+I like to spend time on Cross Validated:
 
 <div>
 

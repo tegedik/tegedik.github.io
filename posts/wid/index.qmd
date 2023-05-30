@@ -105,12 +105,12 @@ Now I just want to plot the trends using this subset:
 
 
 df %>% 
-  ggplot(aes(year, value, color=variable)) + 
+  ggplot(aes(year, value, linetype=variable)) + 
   geom_line(linewidth=1) +
   facet_grid(~percentile, labeller=labeller(percentile=c("p0p50" = "Bottom 50% share", "p90p100" = "Top 10% share", "p99p100" = "Top 1% share"))) + 
   theme_minimal() +
   scale_y_continuous(labels = scales::percent) +
-  scale_color_discrete(labels=c("Wealth", "Income")) +
+  scale_linetype_discrete(labels=c("Wealth", "Income")) +
   labs(x =" ", y=" ", title=" Wealth and Income in Inquality in Turkey",
        caption = "World Inequality Database, 1980-2021") +
   theme(legend.position = "bottom",
@@ -132,12 +132,12 @@ The plots share the y-axis scale, and the range of percentage values makes it ha
 #| column: page
 
 df %>% 
-  ggplot(aes(year, value, color=variable)) + 
+  ggplot(aes(year, value, linetype=variable)) + 
   geom_line(linewidth=1) +
   facet_wrap(~percentile, labeller=labeller(percentile=c("p0p50" = "Bottom 50% share", "p90p100" = "Top 10% share", "p99p100" = "Top 1% share")), scales="free_y") + 
   theme_minimal() +
   scale_y_continuous(labels = scales::percent) +
-  scale_color_discrete(labels=c("Wealth", "Income")) +
+  scale_linetype_discrete(labels=c("Wealth", "Income")) +
   labs(x =" ", y=" ", title=" Wealth and Income in Inquality in Turkey",
        caption = "World Inequality Database, 1980-2021") +
   theme(legend.position = "bottom",
