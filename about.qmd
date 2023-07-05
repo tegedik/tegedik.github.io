@@ -12,7 +12,11 @@ about:
       href: https://twitter.com/tahirenesgedik
 
 ---
+##### **About**
+
 Sociologist. Interested in quantitative analysis and statistical methods in the social sciences.
+
+CV: ([html](https://tegedik.github.io/cv/)/[pdf](https://tegedik.github.io/cv/index.pdf)).
 
 <!-- <center> 
 
@@ -22,7 +26,9 @@ knitr::include_graphics("dim.jpg")
 
 
 </center> -->
-### Education
+
+<!-- 
+##### **Education**
 
 **University of Florida**  
 PhD in Sociology | 2018
@@ -31,8 +37,8 @@ PhD in Sociology | 2018
 MSc in Sociology | 2012
 
 **Middle East Technical University**  
-BSc in Sociology | 2009
-
+BSc in Sociology |
+-->
 I like to spend time on Cross Validated:
 
 <div>
