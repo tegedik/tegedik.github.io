@@ -38,7 +38,7 @@ MSc in Sociology | 2012
 
 **Middle East Technical University**  
 BSc in Sociology |
--->
+
 
 <div>
 
@@ -47,3 +47,4 @@ BSc in Sociology |
 </div>
 
 <br />
+-->
