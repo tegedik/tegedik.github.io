@@ -1,33 +1,38 @@
 project:
-  type: website
   output-dir: docs
+  type: website
 
 website:
-  site-url: https://tegedik.github.io
-  title: "Technical Difficulties"
-  open-graph: true
-  twitter-card:
-    title: "Technical Difficulties"
-    creator: "@tahirenesgedik"
-    image: "https://tegedik.github.io/td/dim.jpg"
   navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: blog.qmd  
+        text: Blog
+      - href: cv/mycv.pdf
+        text: CV 
     right:
-      - href: about.qmd
-        text: about
-      - icon: github
-        href: https://github.com/tegedik
-      - icon: twitter
-        href: https://twitter.com/tahirenesgedik
-      - icon: mastodon
-        href: https://fosstodon.org/web/@thrnsgdk
+    - icon: github
+      href: https://github.com/tegedik
+    - icon: box
+      href: https://bsky.app/profile/tegedik.bsky.social
+    - icon: mastodon
+      href: https://fosstodon.org/@thrnsgdk
+    - icon: twitter
+      href: https://twitter.com/tahirenesgedik
+    - icon: linkedin
+      href: https://www.linkedin.com/in/tegedik/
+  page-footer:
+    background: light # or dark
+    center:
+      - "Copyright 2023, Tahir Enes Gedik"
+
 format:
   html:
     theme: 
       - simplex
-      - custom.scss
     css: styles.css
+    toc: true
 
-editor: visual
-#highlight-style: arrow
 
 

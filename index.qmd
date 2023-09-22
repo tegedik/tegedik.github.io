@@ -1,14 +1,58 @@
 ---
-listing:
-  contents: posts
-  sort: "date desc"
-  type: table
-  #fields: [date, title, author, categories]
-  image-placeholder: dim.jpg
-  grid-columns: 2
-  categories: false
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: false
+title: Tahir Enes Gedik
+caption: a
+about:
+  template: solana
+  image: profile.jpeg
+  image-shape: rectangle
+  image-width: 15em
+#  links:
+#    - icon: github
+#      href: https://github.com/tegedik
+#    - icon: box
+#      href: https://bsky.app/profile/tegedik.bsky.social
+#    - icon: mastodon
+#      href: https://fosstodon.org/@thrnsgdk
+#    - icon: twitter
+#      href: https://twitter.com/tahirenesgedik
+#    - icon: linkedin
+#      href: https://www.linkedin.com/in/tegedik/
+
 ---
+
+Sociologist interested in quantitative analysis and statistical methods in the social sciences.
+
+
+<!-- <center> 
+
+CV: ([html](https://tegedik.github.io/cv/)/[pdf](https://tegedik.github.io/cv/index.pdf)).
+
+
+```{r, echo=FALSE, fig.align="center", fig.cap="*The Curse of Dimensionality* by Saul Steinburg (1968)", out.width="80%"}
+knitr::include_graphics("dim.jpg")
+```
+
+
+</center> -->
+
+<!-- 
+##### **Education**
+
+**University of Florida**  
+PhD in Sociology | 2018
+
+**Middle East Technical University**  
+MSc in Sociology | 2012
+
+**Middle East Technical University**  
+BSc in Sociology |
+
+
+<div>
+
+<a align="left" href="https://stats.stackexchange.com/users/109647/t-e-g"> <img src="https://stats.stackexchange.com/users/flair/109647.png" title="profile for T.E.G. at Cross Validated, Q&amp;A for people interested in statistics, machine learning, data analysis, data mining, and data visualization" alt="profile for T.E.G. at Cross Validated, Q&amp;A for people interested in statistics, machine learning, data analysis, data mining, and data visualization" align="left" width="208" height="58"/> </a>
+
+</div>
+
+<br />
+-->

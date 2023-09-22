@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tahir Enes Gedik</title>
+<title>blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,9 +30,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -58,12 +61,43 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -76,11 +110,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
+    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -122,53 +156,123 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
-<!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Tahir Enes Gedik</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header> 
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Sociologist interested in quantitative analysis and statistical methods in the social sciences.</p>
-<!-- <center> 
-CV: ([html](https://tegedik.github.io/cv/)/[pdf](https://tegedik.github.io/cv/index.pdf)).
-::: {.cell layout-align="center"}
-::: {.cell-output-display}
-![*The Curse of Dimensionality* by Saul Steinburg (1968)](dim.jpg){fig-align='center' width=80%}
-:::
-:::
-</center> -->
-<!-- 
-##### **Education**
-**University of Florida**  
-PhD in Sociology | 2018
-**Middle East Technical University**  
-MSc in Sociology | 2012
-**Middle East Technical University**  
-BSc in Sociology |
-<div>
-<a align="left" href="https://stats.stackexchange.com/users/109647/t-e-g"> <img src="https://stats.stackexchange.com/users/flair/109647.png" title="profile for T.E.G. at Cross Validated, Q&amp;A for people interested in statistics, machine learning, data analysis, data mining, and data visualization" alt="profile for T.E.G. at Cross Validated, Q&amp;A for people interested in statistics, machine learning, data analysis, data mining, and data visualization" align="left" width="208" height="58"/> </a>
-</div>
-<br />
--->
-
-
-</main></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
-    <img src="profile.jpeg" class="about-image
-  rectangle " style="width: 15em;">
-  </div>
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1661756400000" data-listing-file-modified-sort="1682524850820" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-title-sort="Bourdieu and Boudon: Why One is Revered and the Other Neglected in Turkey?" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Aug 29, 2022</span>
+</td>
+<td>
+<a href="./posts/BvsB/index.html" class="title listing-title">Bourdieu and Boudon: Why One is Revered and the Other Neglected in Turkey?</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+
+<tr data-index="1" data-listing-date-sort="1630220400000" data-listing-file-modified-sort="1674675263614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Trouble with Multinomial Logistic Regression Tables" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Aug 29, 2021</span>
+</td>
+<td>
+<a href="./posts/multinom/index.html" class="title listing-title">Trouble with Multinomial Logistic Regression Tables</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1592204400000" data-listing-file-modified-sort="1661844887000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-title-sort="Achen ve Üç Kuralı" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 15, 2020</span>
+</td>
+<td>
+<a href="./posts/aart/index.html" class="title listing-title">Achen ve Üç Kuralı</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1588489200000" data-listing-file-modified-sort="1661844839620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Nonparametric Tests and Why I am Wary of Using Them" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 3, 2020</span>
+</td>
+<td>
+<a href="./posts/nonp/index.html" class="title listing-title">Nonparametric Tests and Why I am Wary of Using Them</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1554015600000" data-listing-file-modified-sort="1661844865000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-title-sort="Poor Man's Galton Board" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 31, 2019</span>
+</td>
+<td>
+<a href="./posts/gb/index.html" class="title listing-title">Poor Man’s Galton Board</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+<tr data-index="5" data-listing-date-sort="1544169600000" data-listing-file-modified-sort="1661844815161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-title-sort="Sorcerer's Apprentice Approach to Statistical Analysis" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 7, 2018</span>
+</td>
+<td>
+<a href="./posts/socapp/index.html" class="title listing-title">Sorcerer’s Apprentice Approach to Statistical Analysis</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+<tr data-index="6" data-listing-date-sort="1517904000000" data-listing-file-modified-sort="1661844895016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Maximum Likelihood Estimation: Finding the Top of a Hill" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Feb 6, 2018</span>
+</td>
+<td>
+<a href="./posts/clmb/index.html" class="title listing-title">Maximum Likelihood Estimation: Finding the Top of a Hill</a>
+</td>
+<td>
+<span class="listing-author">T.E.G. </span>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
- <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -189,6 +293,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
