@@ -9,7 +9,7 @@ website:
         text: About
       - href: blog.qmd  
         text: Blog
-      - href: cv/mycv.pdf
+      - href: cv/index.pdf
         text: CV 
     right:
     - icon: github
