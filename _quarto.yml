@@ -12,6 +12,8 @@ website:
       - href: teg_cv.pdf
         text: CV 
     right:
+    - icon: envelope
+      href: mailto:tegedik@gmail.com
     - icon: github
       href: https://github.com/tegedik
     - icon: box
