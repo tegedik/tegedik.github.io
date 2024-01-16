@@ -2,13 +2,13 @@ project:
   output-dir: docs
   type: website
 
-#website:
-#  navbar:
-#    left:
-#      - href: index.qmd
-#        text: About
-#      - href: blog.qmd  
-#        text: Blog
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: about
+      - href: blog.qmd  
+        text: blog
 #      - href: teg_cv.pdf
 #        text: Short CV 
 #    right:

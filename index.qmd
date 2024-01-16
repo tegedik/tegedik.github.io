@@ -26,7 +26,7 @@ about:
 #      href: https://www.linkedin.com/in/tegedik/
     - text: short cv
       href: short_cv.pdf
-    
+navbar: false
 
 ---
 

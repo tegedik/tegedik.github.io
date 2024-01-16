@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,6 +25,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -44,7 +45,6 @@ div.csl-indent {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -60,12 +60,18 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 20,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -86,66 +92,11 @@ div.csl-indent {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../teg_cv.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/tegedik" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/tegedik.bsky.social" rel="" target=""><i class="bi bi-box" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/(thrnsgdk?)" rel="" target=""><i class="bi bi-mastodon" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/tahirenesgedik" rel="" target=""><i class="bi bi-twitter" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/tegedik/" rel="" target=""><i class="bi bi-linkedin" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools">
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -181,13 +132,15 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<div class="page-columns page-full"><p>Yazıya başlamadan önce başlığın Cristopher Achen’ın üç kuralı anlamına gelmediğini, Achen’ın “Toward A New Political Methodology: Microfoundations and ART.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">2002</a>)</span> isimli makalesinde bahsettiği <em>Üç Kuralı</em>’na (<em>A Rule of Three</em>) gönderme yaptığını belirtmeliyim. Yazıda bu makale ve <em>Üç Kuralı</em> üzerinde duracağım.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Aslında <em>Üç Kuralı</em>na makalenin sonlarında kısaca ve bir öneri olarak değiniliyor. Bu öneriye kadar Achen’ın yaptığı tartışmalar da ilginç. Kısaca bu bölümlere değinmek konuyla ilgili daha iyi bir fikir verebilir.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Aslında düşününce Achen’ın üç kuralı demekte de bir sıkıntı yok.</p></li></div></div>
-<p>Girişi takip eden üç bölümde Achen bilinen tahminleyicilerin (<em>estimator</em>) genelleştirilmesi konusunu tartışıyor. Özellikle logit’in iki genelleştirmesi üzerinde duruyor: scobit (skewed logit) ve power logit. Nicel analizlere aşina olmayanlar için bu bölümler biraz ürkütücü gelebilir, çok sayıda yunan harfi ve formül havada uçuşuyor. Aslında arkadaki fikir oldukça basit. Mesela iki kategorili (“başarı” ve “başarısızlık”) bir değişken için bir logit modeli düşünelim. Eğer <span class="math inline">\(P\)</span> bu model altında başarılı olma olasılığı ise,</p>
+
+<p>Yazıya başlamadan önce başlığın Cristopher Achen’ın üç kuralı anlamına gelmediğini, Achen’ın “Toward A New Political Methodology: Microfoundations and ART.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">2002</a>)</span> isimli makalesinde bahsettiği <em>Üç Kuralı</em>’na (<em>A Rule of Three</em>) gönderme yaptığını belirtmeliyim. Yazıda bu makale ve <em>Üç Kuralı</em> üzerinde duracağım.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Aslında <em>Üç Kuralı</em>na makalenin sonlarında kısaca ve bir öneri olarak değiniliyor. Bu öneriye kadar Achen’ın yaptığı tartışmalar da ilginç. Kısaca bu bölümlere değinmek konuyla ilgili daha iyi bir fikir verebilir.</p>
+<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Aslında düşününce Achen’ın üç kuralı demekte de bir sıkıntı yok.</p></li></div><p>Girişi takip eden üç bölümde Achen bilinen tahminleyicilerin (<em>estimator</em>) genelleştirilmesi konusunu tartışıyor. Özellikle logit’in iki genelleştirmesi üzerinde duruyor: scobit (skewed logit) ve power logit. Nicel analizlere aşina olmayanlar için bu bölümler biraz ürkütücü gelebilir, çok sayıda yunan harfi ve formül havada uçuşuyor. Aslında arkadaki fikir oldukça basit. Mesela iki kategorili (“başarı” ve “başarısızlık”) bir değişken için bir logit modeli düşünelim. Eğer <span class="math inline">\(P\)</span> bu model altında başarılı olma olasılığı ise,</p>
 <p><span class="math display">\[P = \frac{1}{1 + e^{-z}}\]</span> bize lojistik dağılımın kümülafif dağılım fonksiyonunu (<em>cumulatif distribution function</em> - cdf) verecektir. Genelde model bir link fonksiyonuyla tamamlanır yani <span class="math inline">\(z\)</span> bağımsız değişkenlerin lineer fonksiyonu olarak ifade edilir (<span class="math inline">\(z_i = X_i\beta\)</span>). Achen, scobit ve power logit’in bu modelin bir genelleştirmesi olarak düşünülebileceğini söylüyor. Mesela,</p>
-<div class="page-columns page-full"><p><span class="math display">\[P_{i}^{**} = P_{i}^{a} \frac{1}{(1 + e^{-X_i\beta})^\alpha}\]</span> bize power logit cdf’sini verir. Achen neden böyle bir genelleştirmeye ihtiyaç duyabileceğimizi, logit modelini <em>random utility model</em> olarak ifade ettikten sonra tartışıyor.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Ancak burada daha fazla ayrıntıya girip açıklamamıza gerek yok. Zaten Achen’ın amacı da bu tahminleyicileri okura tanıtmak değil. Daha ziyade sayıları gittikçe artan tahminleyicilerin gerekliliğini sorgulamak. Achen’a göre tahminleyicileri çoğaltmak sorun değil hatta tartışma sırasında iki tane (sahte) tahminleyici de kendisi uyduruyor (<em>mixit</em> ve <em>clumpit</em>). Sorun bu tahminleyicilerin istatiksel kesinliği (<em>precision</em>) düşürmesi. Mesela scobit, logit’e tek parametre ekliyor (<span class="math inline">\(\alpha\)</span>) ancak çok daha büyük örneklem gerektiriyor (Achen’ın örnek verdiği çalışmada 100.000’in üzerinde gözlem var). Achen, sadece eldeki veriye özgü bir durumu hesaba kattığı ya da daha genel olduğu için yeni bir tahminleyici kullanmayı sorunlu buluyor. Ayrıca sürekli daha genel tahminleyiciler üretmeye çalışmanın metodolojistlerin işi olmadığını söylüyor:</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Kimi zaman iki kategorili bağımlı değişkeni örtük (<em>latent</em>) bir değişken olarak modellemek de denir (örn., <span class="math inline">\(y^*=X_i\beta + u\)</span>). Burada Achen için önemli mesele <em>gözlemlenmeyen stokastik değişken</em> (hata (<em>error</em>) da denir) olan <span class="math inline">\(u\)</span>’nun kümülatif dağılım fonksiyonunun simetrik olması. Böyle simetrik bir dağılımın yarattığı kısıtlamaları aşmak için scobit ya da power logit kullanılmasını tartışıyor <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 427–28</a>)</span>.</p></li></div></div>
-<blockquote class="blockquote">
+<p><span class="math display">\[P_{i}^{**} = P_{i}^{a} \frac{1}{(1 + e^{-X_i\beta})^\alpha}\]</span> bize power logit cdf’sini verir. Achen neden böyle bir genelleştirmeye ihtiyaç duyabileceğimizi, logit modelini <em>random utility model</em> olarak ifade ettikten sonra tartışıyor.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Ancak burada daha fazla ayrıntıya girip açıklamamıza gerek yok. Zaten Achen’ın amacı da bu tahminleyicileri okura tanıtmak değil. Daha ziyade sayıları gittikçe artan tahminleyicilerin gerekliliğini sorgulamak. Achen’a göre tahminleyicileri çoğaltmak sorun değil hatta tartışma sırasında iki tane (sahte) tahminleyici de kendisi uyduruyor (<em>mixit</em> ve <em>clumpit</em>). Sorun bu tahminleyicilerin istatiksel kesinliği (<em>precision</em>) düşürmesi. Mesela scobit, logit’e tek parametre ekliyor (<span class="math inline">\(\alpha\)</span>) ancak çok daha büyük örneklem gerektiriyor (Achen’ın örnek verdiği çalışmada 100.000’in üzerinde gözlem var). Achen, sadece eldeki veriye özgü bir durumu hesaba kattığı ya da daha genel olduğu için yeni bir tahminleyici kullanmayı sorunlu buluyor. Ayrıca sürekli daha genel tahminleyiciler üretmeye çalışmanın metodolojistlerin işi olmadığını söylüyor:</p>
+<div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Kimi zaman iki kategorili bağımlı değişkeni örtük (<em>latent</em>) bir değişken olarak modellemek de denir (örn., <span class="math inline">\(y^*=X_i\beta + u\)</span>). Burada Achen için önemli mesele <em>gözlemlenmeyen stokastik değişken</em> (hata (<em>error</em>) da denir) olan <span class="math inline">\(u\)</span>’nun kümülatif dağılım fonksiyonunun simetrik olması. Böyle simetrik bir dağılımın yarattığı kısıtlamaları aşmak için scobit ya da power logit kullanılmasını tartışıyor <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 427–28</a>)</span>.</p></li></div><blockquote class="blockquote">
 <p>Statisticians do that for a living, and we will never be as good at their job as they are. Trying to keep up will leave us forever second-rate —at best— and, more importantly, irrelevant to genuine empirical advance in the discipline. <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 437</a>)</span></p>
 </blockquote>
 <p>Makalenin bundan sonra ampirik ilerlemeyi mümkün kılacak iki güzergaha işaret ettiğini söyleyebiliriz. İlkinde Achen, tahminleyicileri seçmek ve yapılandırmak için (siyasal) aktörlerin davranışlarına dair formel modellere başvurulması gerektiğini söylüyor. Bu formel modelin hangi teoriden geldiği önemli değil. Önemli olan formel modelin, istatistiksel tanımlamla (<em>specification</em>) için mikrotemel olması. Daha kaba bir ifadeyle, istatiksel model, bu formel modelden çıkmalı. Buna göre bir tahminleyici formel modele uygunsa kullanılmalı yoksa sırf yeni, moda ya da karmaşık olduğu için tercih edilmemeli. Achen’ın ifade şekli kimilerine yabancı gelebilir. Ancak arkasındaki fikir oldukça tanıdık: teori (ve teoriden çıkan model) analizi yönlendirmeli.</p>
@@ -195,15 +148,15 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>A Rule of Three (ART): A statistical specification with more than three explanatory variables is meaningless <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 446</a>)</span>.</p>
 </blockquote>
-<div class="page-columns page-full"><p>Yani Achen’a göre bir sürü kontrol değişkeniyle, karmaşık modeller hesaplamak yerine üç bağımsız değişkenle daha basit bir analiz yapmak, mesela çapraz tablolar kullanmak, çok daha aydınlatıcı olabilir. Hatta Achen bir adım daha ileri gidip örneklemi bölmeyi ve her alt-örneklem üzerinden ayrı ayrı analiz yapmayı öneriyor.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Böylece gruplar arasındaki farkların (<em>farklı hikayelerin</em>) daha iyi yakalanabileceğini iddia ediyor.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;“If one needs several more controls, then there is too much going on in the sample for reliable inference. No one statistical specification can cope with the religious diversity of the American people with respect to abortion attitudes, for example. We have all done estimations like these, underestimating American differences and damaging our inferences by throwing everyone into one specification and using dummy variables for race and denomination. It’s easy, but it’s useless, and we need to stop.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 446</a>)</span></p></li></div></div>
-<p>Kısaca özetlemek gerekirse, Achen:</p>
+<p>Yani Achen’a göre bir sürü kontrol değişkeniyle, karmaşık modeller hesaplamak yerine üç bağımsız değişkenle daha basit bir analiz yapmak, mesela çapraz tablolar kullanmak, çok daha aydınlatıcı olabilir. Hatta Achen bir adım daha ileri gidip örneklemi bölmeyi ve her alt-örneklem üzerinden ayrı ayrı analiz yapmayı öneriyor.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Böylece gruplar arasındaki farkların (<em>farklı hikayelerin</em>) daha iyi yakalanabileceğini iddia ediyor.</p>
+<div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;“If one needs several more controls, then there is too much going on in the sample for reliable inference. No one statistical specification can cope with the religious diversity of the American people with respect to abortion attitudes, for example. We have all done estimations like these, underestimating American differences and damaging our inferences by throwing everyone into one specification and using dummy variables for race and denomination. It’s easy, but it’s useless, and we need to stop.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 446</a>)</span></p></li></div><p>Kısaca özetlemek gerekirse, Achen:</p>
 <ol type="1">
 <li>Teorilerin ve bunlardan çıkan formel modellerin istatiksel analizi yönlendirmesi gerektiğini,</li>
 <li>Böyle bir formel model yoksa, analizin çok daha titiz ve tutumlu yapılması, bir sürü değişkenin analize rastgele atılmaması gerektiğini söylüyor ve <em>üç kuralını</em> öneriyor.</li>
 </ol>
 <p>İlk maddeye en azından kağıt üzerinde çoğu araştırmacının itiraz edeceğini sanmıyorum. Elbette böyle bir uygulama gerçekçi değil. Veri analizi pratikte çok daha karmaşık, kitaplarda sırayla takip edilmesi önerilen adımların içiçe geçtiği bir süreç. Bilimsel makalelerde, sanki öyle değilmişçesine, her şey kitabına uygun yapılmış gibi sunulması durumu değiştirmiyor.</p>
-<div class="page-columns page-full"><p>İkinci maddeye de bir yere kadar itiraz edileceğini düşünmüyorum, yani <em>üç kuralı</em>na kadar. Öncelikle üç değişken tercihini keyfi bulanlar olacaktır. Achen da neden üçü seçtiğine dair pek ikna edici bir açıklama sunmuyor (deneyim; iki değişkenin az, dört değişkenin fazla olması?). Ancak kanımca Achen’ın derdi de insanları ikna etmek değil, dikkat çekmek. Makaleyi zaman zaman alaycı bir dille yazması da bunun göstergesi.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Ayrıca örneklemi bölme fikri (başka bir tabirle <em>stratification</em>) herkes tarafından kabul görmeyecektir. Mesela böyle bir durumda (stratified) parametre tahminleri arasındaki farkı istatiksel olarak test etme imkanı ortadan kalkıyor.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;“At this point, no doubt, empirical investigators and methodologists accustomed to contemporary political science norms will object.”Look,” they will say, “this new Glockenspiel estimator may not have those frou-frou microfoundations you insist on, but it makes theoretical sense by my lights: It takes account of the yodeled nature of my dependent variable, which ordinary regression ignores. Plus it can be derived rigorously from the Cuckoo distribution. Besides, it fits better. The graphs are pretty, at least if not looked at too closely, and the likelihood ratio test rejects the ordinary regression fit at the 0.05 level. Theory-schmeary. Our job is to let the data decide. I’m going to use Glockenspiel. Anything else is choosing a poorer fit.” Nearly all of us methodologists have shared these views at some stage of our professional lives.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 440</a>)</span></p></li><li id="fn5"><p><sup>5</sup>&nbsp;Achen böyle bir eleştiriye araştırma amaçlarının farklı olabileceği (mesela karşılaştırma olmadığı) cevabını verebilir.</p></li></div></div>
-<p>Yukarıda bahsettiğim muğlaklık dışında iki muhtemel sorun daha var: (1) <em>üç kuralı</em>nın farklı disiplinlerdeki karşılığı ve (2) uygulamada keyfi olarak yorumlanması. Achen metodoloji tartışmasını, başlıktan da anlaşılacağı üzere, siyaset bilimi özelinde yürütüyor. Mesela analiz biriminin ülkeler olduğu bir araştırmada, birden fazla ekonomik ya da idari gösterge kullanmak (örn. World Bank governance indicators) multicollinearity sorununa yol açabilir. Kural böyle bir durumda işlevsel olabilir. Ancak analiz biriminin bireyler olduğu bir araştırmada, sosyodemografik ya da sosyoekonomik kontrolleri kullanmamak (Achen’ın verdiği örneklerin aksine) eleştirilebilir. Mesela sosyoloji ve psikoloji araştırmalarında <em>üç kuralı</em>na uymak adına önemli bir sosyodemografik faktörü dışarda bırakmak göze batacaktır. Tam bu noktada sorun, Achen’ın tasvir ettiği gibi formel modelle ilgili keskin bir ayrımın (var/yok) olmaması.</p>
+<p>İkinci maddeye de bir yere kadar itiraz edileceğini düşünmüyorum, yani <em>üç kuralı</em>na kadar. Öncelikle üç değişken tercihini keyfi bulanlar olacaktır. Achen da neden üçü seçtiğine dair pek ikna edici bir açıklama sunmuyor (deneyim; iki değişkenin az, dört değişkenin fazla olması?). Ancak kanımca Achen’ın derdi de insanları ikna etmek değil, dikkat çekmek. Makaleyi zaman zaman alaycı bir dille yazması da bunun göstergesi.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Ayrıca örneklemi bölme fikri (başka bir tabirle <em>stratification</em>) herkes tarafından kabul görmeyecektir. Mesela böyle bir durumda (stratified) parametre tahminleri arasındaki farkı istatiksel olarak test etme imkanı ortadan kalkıyor.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;“At this point, no doubt, empirical investigators and methodologists accustomed to contemporary political science norms will object.”Look,” they will say, “this new Glockenspiel estimator may not have those frou-frou microfoundations you insist on, but it makes theoretical sense by my lights: It takes account of the yodeled nature of my dependent variable, which ordinary regression ignores. Plus it can be derived rigorously from the Cuckoo distribution. Besides, it fits better. The graphs are pretty, at least if not looked at too closely, and the likelihood ratio test rejects the ordinary regression fit at the 0.05 level. Theory-schmeary. Our job is to let the data decide. I’m going to use Glockenspiel. Anything else is choosing a poorer fit.” Nearly all of us methodologists have shared these views at some stage of our professional lives.” <span class="citation" data-cites="achen2002">(<a href="#ref-achen2002" role="doc-biblioref">Achen 2002, 440</a>)</span></p></li><li id="fn5"><p><sup>5</sup>&nbsp;Achen böyle bir eleştiriye araştırma amaçlarının farklı olabileceği (mesela karşılaştırma olmadığı) cevabını verebilir.</p></li></div><p>Yukarıda bahsettiğim muğlaklık dışında iki muhtemel sorun daha var: (1) <em>üç kuralı</em>nın farklı disiplinlerdeki karşılığı ve (2) uygulamada keyfi olarak yorumlanması. Achen metodoloji tartışmasını, başlıktan da anlaşılacağı üzere, siyaset bilimi özelinde yürütüyor. Mesela analiz biriminin ülkeler olduğu bir araştırmada, birden fazla ekonomik ya da idari gösterge kullanmak (örn. World Bank governance indicators) multicollinearity sorununa yol açabilir. Kural böyle bir durumda işlevsel olabilir. Ancak analiz biriminin bireyler olduğu bir araştırmada, sosyodemografik ya da sosyoekonomik kontrolleri kullanmamak (Achen’ın verdiği örneklerin aksine) eleştirilebilir. Mesela sosyoloji ve psikoloji araştırmalarında <em>üç kuralı</em>na uymak adına önemli bir sosyodemografik faktörü dışarda bırakmak göze batacaktır. Tam bu noktada sorun, Achen’ın tasvir ettiği gibi formel modelle ilgili keskin bir ayrımın (var/yok) olmaması.</p>
 <p>Diğer mesele ise uygulamada keyfi yorumlama ihtimali. Mesela formel model olmamasına rağmen, literatürde önemli olduğu gösterilen bir faktörü <em>üç kuralı</em>na uymak adına dışarıda bırakmak. Bir grup değişkenden neden üçünün seçildiğini, diğerlerinin dışarıda bırakıldığını ya da bir verinin neden belli bir şekilde bölündüğünü açıklamamak vs.&nbsp;Achen’ı takip edip bu keyfi yaklaşımı gösteren makaleler olup olmadığına ayrıca bakmak gerekiyor. Dolayısıyla elimde bir örnek olmadığını, bunu sadece bir risk olarak gördüğümü söylemeliyim.</p>
 <p>Kısacası Achen’ın mesajının ruhunu geçerli bulsam da bunun kendini gösterdiği biçim (<em>ART</em>) tartışmalı gözüküyor. Kanımca daha genel olarak alınacak ders, veri analizinde Achen’ın gösterilmesini istediği titizliğin bu tür kuralları birebir uygulamayı zorlaştırması.</p>
 
@@ -211,13 +164,14 @@ div.csl-indent {
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-achen2002" class="csl-entry" role="listitem">
 Achen, Christopher H. 2002. <span>“Toward <span>A</span> <span>New</span> <span>Political</span> <span>Methodology</span>: <span>Microfoundations</span> and <span>ART</span>.”</span> <em>Annual Review of Political Science</em> 5 (1): 423–50.
 </div>
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2020,
   author = {, T.E.G.},
   title = {Achen Ve {Üç} {Kuralı}},
+  pages = {undefined},
   date = {2020-06-15},
   langid = {en}
 }
@@ -303,10 +257,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -316,8 +269,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -330,6 +292,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -373,6 +457,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -398,6 +483,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -458,23 +569,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
- Copyright 2023, Tahir Enes Gedik
-  </li>  
-</ul>
-    </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
+
 
 
 
