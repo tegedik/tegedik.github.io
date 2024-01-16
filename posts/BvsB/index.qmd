@@ -3,7 +3,7 @@ title: "Bourdieu and Boudon: Why One is Revered and the Other Neglected in Turke
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 #categories:
 #  - sociology

@@ -3,7 +3,7 @@ title: "Maximum Likelihood Estimation: Finding the Top of a Hill"
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "2/6/2018"
 date-format: medium

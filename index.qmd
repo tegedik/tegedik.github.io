@@ -8,8 +8,8 @@ about:
   image-width: 15em
   links:
     - icon: journals
-      text: blog  
-      href: blog.qmd  
+      text: blog
+      href: blog.qmd
     - icon: envelope
       text: email
       href: mailto:tegedik@gmail.com

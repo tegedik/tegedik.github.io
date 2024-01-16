@@ -4,7 +4,7 @@ description: " "
 image: mp1.png
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "3/31/2019"
 date-format: medium

@@ -3,7 +3,7 @@ title: "Trouble with Multinomial Logistic Regression Tables"
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "8/29/2021"
 date-format: medium

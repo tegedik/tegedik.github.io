@@ -3,7 +3,7 @@ title: "Sorcerer's Apprentice Approach to Statistical Analysis"
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "12/7/2018"
 date-format: medium

@@ -3,7 +3,7 @@ title: "Achen ve Üç Kuralı"
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "6/15/2020"
 date-format: medium

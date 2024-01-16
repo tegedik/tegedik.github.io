@@ -3,7 +3,7 @@ title: "Nonparametric Tests and Why I am Wary of Using Them"
 description: " "
 author: 
   - name: T.E.G.
-    url: {}
+    url: https://tegedik.github.io
 citation: true
 date: "5/3/2020"
 date-format: medium
