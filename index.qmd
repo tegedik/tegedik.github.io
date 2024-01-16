@@ -2,13 +2,20 @@
 title: Tahir Enes Gedik
 caption: a
 about:
-  template: solana
+  template: jolla
   image: profile.jpeg
-  image-shape: rectangle
+  image-shape: round
   image-width: 15em
-#  links:
-#    - icon: github
-#      href: https://github.com/tegedik
+  links:
+    - icon: journals
+      text: blog  
+      href: blog.qmd  
+    - icon: envelope
+      text: email
+      href: mailto:tegedik@gmail.com
+    - icon: github
+      text: github
+      href: https://github.com/tegedik
 #    - icon: box
 #      href: https://bsky.app/profile/tegedik.bsky.social
 #    - icon: mastodon
@@ -17,6 +24,9 @@ about:
 #      href: https://twitter.com/tahirenesgedik
 #    - icon: linkedin
 #      href: https://www.linkedin.com/in/tegedik/
+    - text: Short CV
+      href: short_cv.pdf
+    
 
 ---
 

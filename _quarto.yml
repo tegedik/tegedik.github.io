@@ -2,32 +2,32 @@ project:
   output-dir: docs
   type: website
 
-website:
-  navbar:
-    left:
-      - href: index.qmd
-        text: About
-      - href: blog.qmd  
-        text: Blog
-      - href: teg_cv.pdf
-        text: CV 
-    right:
-    - icon: envelope
-      href: mailto:tegedik@gmail.com
-    - icon: github
-      href: https://github.com/tegedik
-    - icon: box
-      href: https://bsky.app/profile/tegedik.bsky.social
-    - icon: mastodon
-      href: https://fosstodon.org/@thrnsgdk
-    - icon: twitter
-      href: https://twitter.com/tahirenesgedik
-    - icon: linkedin
-      href: https://www.linkedin.com/in/tegedik/
-  page-footer:
-    background: light # or dark
-    center:
-      - "Copyright 2023, Tahir Enes Gedik"
+#website:
+#  navbar:
+#    left:
+#      - href: index.qmd
+#        text: About
+#      - href: blog.qmd  
+#        text: Blog
+#      - href: teg_cv.pdf
+#        text: Short CV 
+#    right:
+#    - icon: envelope
+#      href: mailto:tegedik@gmail.com
+#    - icon: github
+#      href: https://github.com/tegedik
+#    - icon: box
+#      href: https://bsky.app/profile/tegedik.bsky.social
+#    - icon: mastodon
+#      href: https://fosstodon.org/@thrnsgdk
+#    - icon: twitter
+#      href: https://twitter.com/tahirenesgedik
+#    - icon: linkedin
+#      href: https://www.linkedin.com/in/tegedik/
+#  page-footer:
+#    background: light # or dark
+#    center:
+#      - "Copyright 2023, Tahir Enes Gedik"
 
 format:
   html:
