@@ -48,7 +48,7 @@ df <- rbinom(3000, 12, 0.5)
 df %>% 
   data.frame() %>% 
   ggplot(aes(.)) + 
-  geom_histogram(aes(., stat(density)), binwidth = 1, color="white") +
+  geom_histogram(aes(., after_stat(density)), binwidth = 1, color="white") +
   stat_function(fun=dnorm, color="black", args=list(mean=mean(df), sd=sd(df))) +
   scale_y_continuous(limits=c(0, 0.25), breaks = seq(0, 0.25, 0.05)) +
   labs(title="Poor Man's Galton Board") +
