@@ -1,5 +1,5 @@
 ---
-title: "Bourdieu and Boudon: Why One is Revered and the Other Neglected in Turkey?"
+title: "Bourdieu and Boudon: Why One is Revered and the Other Neglected in Turkey"
 description: " "
 author: 
   - name: T.E.G.
