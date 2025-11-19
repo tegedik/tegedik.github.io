@@ -35,7 +35,7 @@ Sonunda büyücü geri döner ve çırağı kurtarır.[^2] Kıssadan hisse: Kiş
 
 [^2]: Goethe'nin şiiri olduğunu bilmeseniz de hikaye size tanıdık gelebilir. Bunun nedeni, Komünist Manifesto'dan [Disney'in *Fantasia* (1940)](https://youtu.be/2DX2yVucz24?t=26s) filmine kadar birçok yerde Büyücünün Çırağı'na atıfta bulunulmasıdır.
 
-[^3]: Burada kişi, bir öğretim üyesi veya lisansüstü öğrencisi olabilir. Bir önemli olduğunu düşünmüyorum.
+[^3]: Burada kişi, bir öğretim üyesi veya lisansüstü öğrencisi olabilir. Bir önemi olduğunu düşünmüyorum.
 
 ```{r, echo=FALSE, fig.align="center", fig.cap="Ferdinand Barth'ın (1842–1892) *Der Zauberlehrling* adlı çalışması"}
 knitr::include_graphics("sa.png")
