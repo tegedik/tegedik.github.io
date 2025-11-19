@@ -28,7 +28,10 @@ website:
 #    background: light # or dark
 #    center:
 #      - "Copyright 2023, Tahir Enes Gedik"
-
+  site-url: https://tegedik.github.io
+  open-graph: true
+  twitter-card:
+    creator: "@tahirenesgedik"
 format:
   html:
     theme: 
